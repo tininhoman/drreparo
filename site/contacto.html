@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Dr. Reparo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card-contacto {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: left;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 { 
+            color: #002266; 
+            margin-bottom: 30px; 
+            font-size: 2rem;
+            border-bottom: 3px solid #ff9900;
+            display: inline-block;
+        }
+
+        .info-item { 
+            margin-bottom: 20px; 
+            font-size: 1.15rem; 
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-item strong { color: #002266; margin-right: 10px; }
+        
+        .icon { font-style: normal; margin-right: 15px; font-size: 1.4rem; }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #002266;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-voltar:hover { background-color: #ff9900; }
+    </style>
+</head>
+<body>
+
+    <div class="card-contacto">
+        <h1>Entre em Contacto</h1>
+        
+        <div class="info-item">
+            <i class="icon">📞</i>
+            <div><strong>Telefone:</strong> 910 878 830</div>
+        </div>
+
+        <div class="info-item">
+            <i class="icon">📧</i>
+            <div><strong>E-mail:</strong> geral@drreparo.pt</div>
+        </div>
+
+        <div class="info-item">
+            <i class="icon">📍</i>
+            <div><strong>Zona:</strong> Gondomar e Grande Porto</div>
+        </div>
+        
+        <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
+    </div>
+
+</body>
+</html>
