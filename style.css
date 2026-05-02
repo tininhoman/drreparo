@@ -160,3 +160,44 @@ footer {
     padding: 40px 0;
     margin-top: 50px;
 }
+/* ===== RESPONSIVIDADE PARA TELEMÓVEL ===== */
+@media (max-width: 768px) {
+
+    /* MENU FIXO AJUSTADO */
+    .menu-fixo {
+        padding: 10px 15px !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+    }
+
+    .menu-fixo nav a {
+        margin-left: 15px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .logo-menu {
+        height: 45px !important;
+    }
+
+    .btn-wpp {
+        padding: 8px 14px !important;
+        margin-left: 15px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* BOTÕES SABER MAIS */
+    .btn-saber-mais {
+        display: block !important;
+        width: 100% !important;
+        max-width: 260px !important;
+        margin: 10px auto !important;
+        text-align: center !important;
+    }
+
+    /* CONTAINERS QUE ESTÃO A ESTOURAR */
+    .servico-card, .box-servico {
+        padding: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
