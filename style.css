@@ -1,32 +1,162 @@
-/* Configurações Gerais */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
-.container { width: 90%; max-width: 1100px; margin: auto; overflow: hidden; }
-
-/* Cabeçalho */
-/* Ajuste da Imagem do Logo no Cabeçalho */
-.logo-img {
-    height: 60px; /* Ajusta esta altura conforme preferires, ex: 50px ou 70px */
-    width: auto;  /* Mantém a proporção da imagem para não distorcer */
-    display: block; /* Remove espaços em branco indesejados por baixo da imagem */
+/* ============================
+   RESET E BASE
+============================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-header { background: #002d5a; color: #fff; padding: 15px 0; border-bottom: 4px solid #ffcc00; }
-header .logo { float: left; font-size: 24px; font-weight: bold; color: #ffcc00; }
-header nav { float: right; margin-top: 5px; }
-header nav a { color: #fff; text-decoration: none; padding: 5px 15px; }
-.btn-topo { background: #ffcc00; color: #002d5a !important; border-radius: 5px; font-weight: bold; }
 
-/* Banner Principal */
-.hero { background: #f4f4f4; padding: 80px 0; text-align: center; border-bottom: 1px solid #ddd; }
-.hero h1 { font-size: 2.5rem; margin-bottom: 10px; color: #002d5a; }
-.cta-principal { display: inline-block; background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; font-size: 1.2rem; transition: 0.3s; }
-.cta-principal:hover { transform: scale(1.05); background: #1ebd59; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
 
-/* Cartões de Serviços */
-.servicos { padding: 50px 0; background: #fff; }
-.servicos .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.card { background: #fff; padding: 30px; border: 1px solid #eee; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-.card h3 { color: #002d5a; margin-bottom: 15px; }
+/* ============================
+   MENU FIXO (PADRÃO DO INDEX)
+============================ */
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #002266;
+    padding: 12px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    border-bottom: 4px solid #f1c40f;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
 
-/* Rodapé */
-footer { background: #222; color: #fff; text-align: center; padding: 40px 0; margin-top: 50px; }
+.logo-menu {
+    height: 55px;
+    width: auto;
+}
+
+.menu-fixo nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.menu-fixo nav a:hover {
+    color: #ff9900;
+}
+
+.btn-wpp {
+    background: #25d366;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: white !important;
+    margin-left: 35px;
+    font-weight: 600;
+}
+
+/* ============================
+   HERO PADRÃO
+============================ */
+.hero-servico {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 90px 0;
+}
+
+.hero-box {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.78);
+    padding: 12px 22px;
+    border-radius: 10px;
+}
+
+.hero-box h1 {
+    color: #3f5f9f;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.hero-box p {
+    color: #3f5f9f;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.cta-principal {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-principal:hover {
+    background: #f39c12;
+}
+
+/* ============================
+   SERVIÇOS
+============================ */
+#servicos {
+    background: #ecf0f1;
+    padding: 60px 0;
+}
+
+.titulo-sec {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.servicos-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.btn-servico {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #002266;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-servico:hover {
+    background: #f39c12;
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+}

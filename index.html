@@ -14,7 +14,7 @@
             overflow: hidden;
         }
 
-        /* Fundo */
+        /* FUNDO ORIGINAL (FUNCIONA PERFEITO) */
         .bg-plano {
             position: fixed;
             top: 0;
@@ -26,36 +26,79 @@
             z-index: -1;
         }
 
+        /* MENU FIXO AJUSTADO (AZUL ESCURO) */
+        .menu-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #002266; /* azul sólido */
+    padding: 12px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    border-bottom: 4px solid #f1c40f; /* AQUI ESTÁ A BARRA AMARELA */
+}
+
+
+        .menu-fixo img {
+            height: 55px;
+        }
+
+        .menu-fixo nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+
+        .menu-fixo nav a:hover {
+            color: #ff9900;
+        }
+
+        .btn-wpp {
+            background: #25d366;
+            padding: 8px 16px;
+            border-radius: 6px;
+            color: white !important;
+            margin-left: 25px;
+        }
+
+        /* CONTAINER ORIGINAL */
         .container {
             position: relative;
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center; /* CENTRALIZA VERTICAL */
+            align-items: center;     /* CENTRALIZA HORIZONTAL */
             padding: 30px 6%;
+            padding-top: 120px; /* espaço para o menu fixo */
         }
 
-        /* Cabeçalho */
-        .header-site img {
-            max-width: 250px;
-            height: auto;
-            margin-top: -5px;
-        }
-
-        /* Hero */
+        /* HERO CENTRALIZADA COM CAIXA BRANCA */
         .hero-content {
             max-width: 550px;
-            margin-top: 100px;
-            position: relative;
-            z-index: 5;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.92);
+            padding: 25px 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .hero-content h1 {
             font-size: 2.8rem;
             font-weight: 900;
             color: #002266;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
             margin-bottom: 20px;
-            text-shadow: none;
+            color: #002266;
         }
 
         .btn-whatsapp {
@@ -75,46 +118,7 @@
             transform: scale(1.05);
         }
 
-        /* Ícones */
-        .icon-bar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            padding: 20px 5%;
-            margin-bottom: 80px;
-        }
-
-        .icon-item {
-            text-decoration: none;
-            color: #002266;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: 0.2s;
-        }
-
-        .icon-item:hover {
-            color: #ff9900;
-            transform: scale(1.05);
-        }
-
-        .icon-item i {
-            font-size: 2.3rem;
-            margin-bottom: 5px;
-            filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8));
-        }
-
-        .icon-item span {
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-
-        /* Footer */
+        /* FOOTER ORIGINAL */
         .footer-barra {
             background-color: #000;
             color: #fff;
@@ -144,24 +148,6 @@
             background: #ff9900;
             color: #000;
         }
-
-        @media (max-width: 600px) {
-            .hero-content {
-                margin-top: 50px;
-            }
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            .icon-bar {
-                margin-bottom: 100px;
-            }
-            .icon-item i {
-                font-size: 1.8rem;
-            }
-            .icon-item span {
-                font-size: 0.75rem;
-            }
-        }
     </style>
 </head>
 
@@ -169,41 +155,35 @@
 
     <div class="bg-plano"></div>
 
+    <!-- MENU FIXO -->
+    <header class="menu-fixo">
+        <img src="logo.png" alt="DR. Reparo">
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="servicos-eletrica.html">Eletricidade</a>
+            <a href="servicos-pichelaria.html">Pichelaria</a>
+            <a href="servicos-reparacoes.html">Reparações</a>
+            <a href="servicos-moveis.html">Montagens</a>
+            <a href="servicos-seguranca.html">Segurança</a>
+            <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+        </nav>
+    </header>
+
     <div class="container">
 
-        <header class="header-site">
-            <img src="logo.png" alt="Dr. Reparo">
-        </header>
-
         <div class="hero-content">
-            <h1>Especialista em Manutenção Predial</h1>
-            <a href="https://wa.me/351910878830" class="btn-whatsapp">WhatsApp Orçamento</a>
-        </div>
-
-        <div class="icon-bar">
-            <a href="servicos-eletrica.html" class="icon-item">
-                <i>⚡</i><span>Eletricidade</span>
-            </a>
-            <a href="servicos-pichelaria.html" class="icon-item">
-                <i>🔧</i><span>Pichelaria</span>
-            </a>
-            <a href="servicos-seguranca.html" class="icon-item">
-                <i>🛡️</i><span>Segurança</span>
-            </a>
-            <a href="servicos-multi.html" class="icon-item">
-                <i>🛠️</i><span>Reparações</span>
-            </a>
-            <a href="servicos-moveis.html" class="icon-item">
-                <i>📦</i><span>Montagens</span>
-            </a>
+            <h1>DR. Reparo</h1>
+            <p>Serviços Profissionais para a sua Casa e Escritório.</p>
+            <a href="https://wa.me/351910878830" class="btn-whatsapp">Pedir Orçamento</a>
         </div>
 
     </div>
 
-    <footer class="footer-barra">
-        <div>📍 Gondomar, Porto | 📞 910 878 830</div>
-        <a href="contacto.html">Página de Contacto</a>
-    </footer>
+    <div class="footer-barra">
+        <span>DR. REPARO - Gondomar | Grande Porto</span>
+        <a href="https://wa.me/351910878830">WhatsApp</a>
+    </div>
 
 </body>
 </html>
