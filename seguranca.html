@@ -9,56 +9,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="pagina-interna">
 
-    <!-- MENU FIXO -->
+    <!-- MENU PREMIUM CENTRALIZADO -->
     <header class="menu-fixo">
-        <img src="logo.png" class="logo-menu" alt="Logo Dr. Reparo">
+        <div class="hamburguer" onclick="toggleMenu()">☰</div>
 
-        <nav>
+        <img src="logo.png" alt="DR. Reparo">
+
+        <nav id="menu-links" class="menu-links">
             <a href="index.html">Início</a>
             <a href="servicos-eletrica.html">Eletricidade</a>
             <a href="servicos-pichelaria.html">Pichelaria</a>
             <a href="servicos-reparacoes.html">Reparações</a>
             <a href="servicos-moveis.html">Montagens</a>
             <a href="servicos-seguranca.html">Segurança</a>
-            
+            <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
         </nav>
-
-        <a class="btn-wpp" href="https://wa.me/351910878830" target="_blank">WhatsApp</a>
     </header>
 
-
-    <!-- HERO DA PÁGINA -->
-    <section class="hero-servico" style="background-image: url('eletrica.png');">
+    <!-- HERO -->
+    <section class="hero-servico" style="background-image: url('eletrica.png'); margin-top:140px;">
         <div class="hero-box">
             <h1>Segurança</h1>
-            <p>Garantir a segurança e a confiabilidade da instalação da casa.</p>
+            <p>Garantimos segurança e confiabilidade na sua instalação elétrica.</p>
         </div>
     </section>
 
-
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- CONTEÚDO -->
     <section id="conteudo" style="max-width: 900px; margin: 60px auto; padding: 20px;">
-
         <h2 style="text-align:center; color:#002266; margin-bottom:25px;">
             Sobre este serviço
         </h2>
 
         <p style="font-size:1.1rem; line-height:1.8; text-align:justify;">
-            <!-- ============================
-                 ESCREVA AQUI O TEXTO
-                 ============================ -->
-            Fazemos uma verificação completa em sua residencia sobre cabeamento se estão na bitolagem certa medimos o consumo dos equipamentos e comparamos se a cablagem aguenta ou se vc pode vima ter problemas eletricos no futuro a partir dessas medições 
+            Realizamos uma verificação completa na sua residência, analisando se a cablagem 
+            está na bitola correta, medindo o consumo dos equipamentos e avaliando se a 
+            instalação suporta a carga atual. Assim, prevenimos problemas elétricos futuros 
+            e garantimos a segurança da sua casa.
         </p>
-
     </section>
-
 
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Dr. Reparo - Soluções para sua casa e escritório</p>
     </footer>
+
+    <!-- SCRIPT DO MENU -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu-links').classList.toggle('show');
+        }
+    </script>
 
 </body>
 </html>

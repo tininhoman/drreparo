@@ -3,61 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automação</title>
+    <title>Instalações Elétricas</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="pagina-interna">
 
-    <!-- MENU FIXO -->
+    <!-- MENU PREMIUM CENTRALIZADO -->
     <header class="menu-fixo">
-        <img src="logo.png" class="logo-menu" alt="Logo Dr. Reparo">
+        <div class="hamburguer" onclick="toggleMenu()">☰</div>
 
-        <nav>
+        <img src="logo.png" alt="DR. Reparo">
+
+        <nav id="menu-links" class="menu-links">
             <a href="index.html">Início</a>
             <a href="servicos-eletrica.html">Eletricidade</a>
             <a href="servicos-pichelaria.html">Pichelaria</a>
             <a href="servicos-reparacoes.html">Reparações</a>
             <a href="servicos-moveis.html">Montagens</a>
             <a href="servicos-seguranca.html">Segurança</a>
+            <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
         </nav>
-
-        <a class="btn-wpp" href="https://wa.me/351910878830" target="_blank">WhatsApp</a>
     </header>
 
-
-    <!-- HERO DA PÁGINA -->
-    <section class="hero-servico" style="background-image: url('eletrica.png');">
+    <!-- HERO -->
+    <section class="hero-servico" style="background-image: url('eletrica.png'); margin-top:140px;">
         <div class="hero-box">
-            <h1>Automação</h1>
-            <p>Casa Inteligente e conosco.</p>
+            <h1>Instalações Elétricas</h1>
+            <p>Montagem profissional com segurança e qualidade.</p>
         </div>
     </section>
 
-
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- CONTEÚDO -->
     <section id="conteudo" style="max-width: 900px; margin: 60px auto; padding: 20px;">
-
         <h2 style="text-align:center; color:#002266; margin-bottom:25px;">
             Sobre este serviço
         </h2>
 
         <p style="font-size:1.1rem; line-height:1.8; text-align:justify;">
-            <!-- ============================
-                 ESCREVA AQUI O TEXTO
-                 ============================ -->
-            Abrir o portão pelo telemovel, ligar uma luz mesmo não estando em casa, abrir a porta pra alguém que chegou sem sair do quarto tudo isso é possivel através da automação consulte 
+            Realizamos instalações elétricas completas, incluindo montagem de quadros, 
+            tomadas, interruptores, iluminação LED e muito mais. Trabalhamos com rigor 
+            e segurança para garantir que a sua instalação esteja dentro das normas e 
+            funcione perfeitamente.
         </p>
-
     </section>
-
 
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Dr. Reparo - Soluções para sua casa e escritório</p>
     </footer>
+
+    <!-- SCRIPT DO MENU -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu-links').classList.toggle('show');
+        }
+    </script>
 
 </body>
 </html>

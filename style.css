@@ -2,73 +2,163 @@
    RESET E BASE
 ============================ */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
     line-height: 1.6;
     color: #333;
-    padding-top: 110px !important;      /* espaço para o menu fixo */
-    padding-bottom: 90px !important;    /* espaço para o footer fixo */
 }
 
 /* ============================
-   MENU FIXO (PADRÃO DO INDEX)
+   MENU BRANCO (GEMINE)
 ============================ */
 .menu-fixo {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 90px;
     background: #002266;
-    padding: 12px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 9999;
-    border-bottom: 4px solid #f1c40f;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    padding: 0 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
-.logo-menu {
-    height: 55px;
+.menu-fixo img {
+    height: 60px;
     width: auto;
 }
 
-.menu-fixo nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 28px;
-    font-weight: 600;
-    font-size: 1rem;
+.menu-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
-.menu-fixo nav a:hover {
-    color: #ff9900;
+.menu-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    color: orange;
 }
 
 .btn-wpp {
-    background: #25d366;
-    padding: 10px 20px;
-    border-radius: 6px;
+    background-color: #25d366;
     color: white !important;
-    margin-left: 35px;
-    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.hamburguer {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: blue;
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        gap: 0;
+    }
+
+    .menu-links.show {
+        display: flex;
+    }
+
+    .menu-links a {
+        width: 100%;
+        text-align: center;
+        padding: 18px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .btn-wpp {
+        width: 90% !important;
+        margin: 10px auto;
+    }
 }
 
 /* ============================
-   HERO PADRÃO
+   AJUSTE PARA PÁGINAS INTERNAS
 ============================ */
-.hero-servico {
+body.pagina-interna {
+    padding-top: 110px !important; /* compensar menu branco */
+}
+
+/* ============================
+   HERO DAS PÁGINAS INTERNAS
+============================ */
+.hero-servico,
+.hero-eletrica,
+.hero-montagens,
+.hero-reparacoes,
+.hero-pichelaria,
+.hero-seguranca {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 150px 0 90px 0 !important; /* corrigido para não colar no menu */
+    padding: 70px 0 70px 0;
 }
 
+/* ============================
+   FUNDOS ESPECÍFICOS
+============================ */
+.hero-eletrica {
+    background-image: url("eletrica.png");
+    padding: 150px 0 90px 0 !important;
+}
+
+.hero-pichelaria {
+    background-image: url("pichelaria.png");
+}
+
+.hero-reparacoes {
+    background-image: url("reparacoes.png");
+}
+
+.hero-montagens {
+    background-image: url("moveis.png");
+}
+
+.hero-seguranca {
+    background-image: url("seguranca.png");
+}
+
+.hero-home {
+    background-image: url("plano.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 70px 0 70px 0;
+}
+
+/* CAIXA DO HERO */
 .hero-box {
     display: inline-block;
     background: rgba(255, 255, 255, 0.78);
@@ -76,48 +166,12 @@ body {
     border-radius: 10px;
 }
 
-.hero-box h1 {
-    color: #3f5f9f;
-    font-size: 2rem;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.hero-box p {
-    color: #3f5f9f;
-    font-size: 1rem;
-    margin-bottom: 12px;
-}
-
-.cta-principal {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #2c3e50;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.cta-principal:hover {
-    background: #f39c12;
-}
-
 /* ============================
-   SERVIÇOS
+   GRID DE SERVIÇOS
 ============================ */
 #servicos {
     background: #ecf0f1;
     padding: 60px 0;
-}
-
-.titulo-sec {
-    text-align: center;
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    font-weight: 700;
 }
 
 .servicos-grid {
@@ -129,27 +183,16 @@ body {
     padding: 0 20px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    text-align: center;
+@media (max-width: 900px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.btn-servico {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
-    background: #002266;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-servico:hover {
-    background: #f39c12;
+@media (max-width: 600px) {
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================
@@ -162,68 +205,70 @@ footer {
     padding: 40px 0;
     margin-top: 50px;
 }
-
 /* ============================
-   RESPONSIVIDADE PARA TELEMÓVEL
+   BOTÕES SABER MAIS (LAYOUT PREMIUM)
 ============================ */
-@media (max-width: 768px) {
+.btn-saber-mais {
+    display: inline-block;
+    background: #002266;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+    margin-top: 15px;
+}
 
-    /* MENU FIXO */
-    .menu-fixo {
-        padding: 10px 20px !important;
-        flex-wrap: wrap !important;
-        justify-content: space-between !important;
-    }
+.btn-saber-mais:hover {
+    background: #ff9900;
+    color: white;
+}
+/* ============================
+   BOTÕES SABER MAIS (btn-servico)
+============================ */
+.btn-servico {
+    display: inline-block;
+    background: #002266; /* azul premium */
+    color: white !important;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+    margin-top: 15px;
+}
 
-    .logo-menu {
-        height: 45px !important;
-    }
+.btn-servico:hover {
+    background: #ff9900; /* laranja premium */
+    color: white !important;
+}
+/* ============================
+   CARDS DE SERVIÇOS (CAIXA BRANCA)
+============================ */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: 0.3s;
+}
 
-    .menu-fixo nav a {
-        margin-left: 12px !important;
-        font-size: 0.9rem !important;
-    }
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
 
-    .btn-wpp {
-        padding: 8px 14px !important;
-        margin-left: 12px !important;
-        font-size: 0.9rem !important;
-    }
+.card h3 {
+    margin-bottom: 10px;
+    color: #002266;
+    font-size: 1.2rem;
+}
 
-    /* GRID DE SERVIÇOS */
-    .servicos-grid {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-    }
-
-    .card {
-        padding: 18px !important;
-    }
-
-    /* BOTÕES SABER MAIS */
-    .btn-servico {
-        display: block !important;
-        width: 100% !important;
-        max-width: 260px !important;
-        margin: 12px auto 0 auto !important;
-        text-align: center !important;
-    }
-
-    /* HERO */
-    .hero-servico {
-        padding: 150px 0 90px 0 !important;
-    }
-
-    .hero-box {
-        width: 90% !important;
-        padding: 15px !important;
-    }
-
-    .hero-box h1 {
-        font-size: 1.6rem !important;
-    }
-
-    .hero-box p {
-        font-size: 0.95rem !important;
-    }
+.card p {
+    margin-bottom: 15px;
+    color: #444;
 }

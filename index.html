@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Reparo - Especialista em Manutenção</title>
+
     <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,10 +14,10 @@
         body, html {
             height: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
-        /* FUNDO ORIGINAL (FUNCIONA PERFEITO) */
+        /* FUNDO DO INDEX */
         .bg-plano {
             position: fixed;
             top: 0;
@@ -28,65 +29,22 @@
             z-index: -1;
         }
 
-        /* MENU FIXO AJUSTADO (AZUL ESCURO) */
-        .menu-fixo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #002266; /* azul sólido */
-    padding: 12px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9999;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    border-bottom: 4px solid #f1c40f; /* AQUI ESTÁ A BARRA AMARELA */
-}
-
-
-        .menu-fixo img {
-            height: 55px;
-        }
-
-        .menu-fixo nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-        }
-
-        .menu-fixo nav a:hover {
-            color: #ff9900;
-        }
-
-        .btn-wpp {
-            background: #25d366;
-            padding: 8px 16px;
-            border-radius: 6px;
-            color: white !important;
-            margin-left: 25px;
-        }
-
-        /* CONTAINER ORIGINAL */
+        /* HERO DO INDEX */
         .container {
-            position: relative;
             height: 100vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center; /* CENTRALIZA VERTICAL */
-            align-items: center;     /* CENTRALIZA HORIZONTAL */
-            padding: 30px 6%;
-            padding-top: 120px; /* espaço para o menu fixo */
+            justify-content: center;
+            align-items: center;
+            padding: 6%;
+            padding-top: 140px; /* espaço para o menu */
         }
 
-        /* HERO CENTRALIZADA COM CAIXA BRANCA */
         .hero-content {
             max-width: 550px;
             text-align: center;
             background: rgba(255, 255, 255, 0.92);
-            padding: 25px 35px;
-            border-radius: 12px;
+            padding: 30px 40px;
+            border-radius: 14px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
@@ -120,7 +78,7 @@
             transform: scale(1.05);
         }
 
-        /* FOOTER ORIGINAL */
+        /* FOOTER */
         .footer-barra {
             background-color: #000;
             color: #fff;
@@ -150,19 +108,20 @@
             background: #ff9900;
             color: #000;
         }
-
     </style>
 </head>
 
-<body>
+<body class="pagina-interna">
 
     <div class="bg-plano"></div>
 
-    <!-- MENU FIXO -->
+    <!-- MENU PREMIUM (IGUAL AO DAS OUTRAS PÁGINAS) -->
     <header class="menu-fixo">
         <img src="logo.png" alt="DR. Reparo">
 
-        <nav>
+        <div class="hamburguer" onclick="toggleMenu()">☰</div>
+
+        <nav class="menu-links" id="menu-links">
             <a href="index.html">Início</a>
             <a href="servicos-eletrica.html">Eletricidade</a>
             <a href="servicos-pichelaria.html">Pichelaria</a>
@@ -174,33 +133,27 @@
     </header>
 
     <div class="container">
-
         <div class="hero-content">
             <h1>DR. Reparo</h1>
             <p>Serviços Profissionais para a sua Casa e Escritório.</p>
             <a href="https://wa.me/351910878830" class="btn-whatsapp">Pedir Orçamento</a>
         </div>
-
     </div>
 
     <div class="footer-barra">
-        <span>DR. REPARO - Gondomar | Grande Porto</span>
-        <a href="https://wa.me/351910878830">WhatsApp</a>
-    </div>
-<!-- BARRA FIXA INFERIOR -->
-<div class="footer-barra">
-    <span>© 2026 DR. REPARO - Gondomar | Grande Porto</span>
+        <span>© 2026 DR. REPARO - Gondomar | Grande Porto</span>
 
-    <div style="display: flex; gap: 10px;">
-        <a href="https://www.facebook.com/share/18i7vnokw1/" target="_blank">
-            Facebook
-        </a>
-<div style="display: flex; gap: 10px;">
-        <a href="contacto.html">
-            Contato
-        </a>
-       
+        <div style="display: flex; gap: 10px;">
+            <a href="https://www.facebook.com/share/18i7vnokw1/" target="_blank">Facebook</a>
+            <a href="contacto.html">Contato</a>
+        </div>
     </div>
-</div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu-links').classList.toggle('show');
+        }
+    </script>
+
 </body>
 </html>

@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Dr. Reparo</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        /* Mantive apenas o estilo específico da página */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f2f5;
@@ -14,6 +17,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            padding-top: 160px; /* espaço para o menu premium */
         }
 
         .card-contacto {
@@ -63,8 +67,26 @@
         .btn-voltar:hover { background-color: #ff9900; }
     </style>
 </head>
-<body>
+<body class="pagina-interna">
 
+    <!-- MENU PREMIUM CENTRALIZADO -->
+    <header class="menu-fixo">
+        <div class="hamburguer" onclick="toggleMenu()">☰</div>
+
+        <img src="logo.png" alt="DR. Reparo">
+
+        <nav id="menu-links" class="menu-links">
+            <a href="index.html">Início</a>
+            <a href="servicos-eletrica.html">Eletricidade</a>
+            <a href="servicos-pichelaria.html">Pichelaria</a>
+            <a href="servicos-reparacoes.html">Reparações</a>
+            <a href="servicos-moveis.html">Montagens</a>
+            <a href="servicos-seguranca.html">Segurança</a>
+            <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+        </nav>
+    </header>
+
+    <!-- CARTÃO DE CONTACTO -->
     <div class="card-contacto">
         <h1>Entre em Contacto</h1>
         
@@ -85,6 +107,13 @@
         
         <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
     </div>
+
+    <!-- SCRIPT DO MENU -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu-links').classList.toggle('show');
+        }
+    </script>
 
 </body>
 </html>

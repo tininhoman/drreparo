@@ -3,61 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnostico</title>
+    <title>Diagnóstico</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="pagina-interna">
 
-    <!-- MENU FIXO -->
+    <!-- MENU PREMIUM CENTRALIZADO -->
     <header class="menu-fixo">
-        <img src="logo.png" class="logo-menu" alt="Logo Dr. Reparo">
+        <div class="hamburguer" onclick="toggleMenu()">☰</div>
 
-        <nav>
+        <img src="logo.png" alt="DR. Reparo">
+
+        <nav id="menu-links" class="menu-links">
             <a href="index.html">Início</a>
             <a href="servicos-eletrica.html">Eletricidade</a>
             <a href="servicos-pichelaria.html">Pichelaria</a>
             <a href="servicos-reparacoes.html">Reparações</a>
             <a href="servicos-moveis.html">Montagens</a>
             <a href="servicos-seguranca.html">Segurança</a>
+            <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
         </nav>
-
-        <a class="btn-wpp" href="https://wa.me/351910878830" target="_blank">WhatsApp</a>
     </header>
 
-
-    <!-- HERO DA PÁGINA -->
-    <section class="hero-servico" style="background-image: url('eletrica.png');">
+    <!-- HERO -->
+    <section class="hero-servico" style="background-image: url('eletrica.png'); margin-top:140px;">
         <div class="hero-box">
-            <h1>Diagnostico</h1>
-            <p>Algo não anda bem, nao funciona!</p>
+            <h1>Diagnóstico</h1>
+            <p>Algo não anda bem? Nós descobrimos o motivo.</p>
         </div>
     </section>
 
-
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- CONTEÚDO -->
     <section id="conteudo" style="max-width: 900px; margin: 60px auto; padding: 20px;">
-
         <h2 style="text-align:center; color:#002266; margin-bottom:25px;">
             Sobre este serviço
         </h2>
 
         <p style="font-size:1.1rem; line-height:1.8; text-align:justify;">
-            <!-- ============================
-                 ESCREVA AQUI O TEXTO
-                 ============================ -->
-            Fazemos o diagnostico achando a falha e alem procurando porque aconteceu e oferecendo solucoes para que a situação nao te cheteie mais resolvendo definitivamente a causa do problema porque só reparar sem resolver a causa o cliente vai ter o mesmo problema novamente
+            Fazemos o diagnóstico completo, identificando a falha e também a causa do problema. 
+            Não adianta apenas reparar — é essencial resolver a origem para que a situação 
+            não volte a acontecer. Trabalhamos para garantir uma solução definitiva, evitando 
+            que o cliente enfrente o mesmo problema novamente.
         </p>
-
     </section>
-
 
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Dr. Reparo - Soluções para sua casa e escritório</p>
     </footer>
+
+    <!-- SCRIPT DO MENU -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu-links').classList.toggle('show');
+        }
+    </script>
 
 </body>
 </html>
