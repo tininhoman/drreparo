@@ -272,3 +272,13 @@ footer {
     margin-bottom: 15px;
     color: #444;
 }
+/* ============================
+   TÍTULO DAS SEÇÕES
+============================ */
+.titulo-sec {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002266;
+    margin-bottom: 40px;
+}
