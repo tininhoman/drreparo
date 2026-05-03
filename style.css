@@ -11,6 +11,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    padding-top: 110px !important;      /* espaço para o menu fixo */
+    padding-bottom: 90px !important;    /* espaço para o footer fixo */
 }
 
 /* ============================
@@ -64,7 +66,7 @@ body {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 90px 0;
+    padding: 150px 0 90px 0 !important; /* corrigido para não colar no menu */
 }
 
 .hero-box {
@@ -209,7 +211,7 @@ footer {
 
     /* HERO */
     .hero-servico {
-        padding: 70px 0 !important;
+        padding: 150px 0 90px 0 !important;
     }
 
     .hero-box {
