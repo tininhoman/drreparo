@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR. Reparo | Serviços de Desentupimentos Profissionais</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para a página de desentupimentos sem o bloco branco */
+        .hero-desentupimentos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+            padding-top: 140px; /* Garante que o fundo cole no menu azul sem buracos */
+            min-height: 100vh;
+            /* Substitua 'fundo-desentupimentos.jpg' pela imagem correspondente ao serviço */
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('fundo-desentupimentos.jpg') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .desentupimentos-conteudo {
+            max-width: 850px;
+            width: 100%;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .desentupimentos-conteudo h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+
+        .desentupimentos-conteudo h2 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff9900;
+            padding-left: 12px;
+        }
+
+        .desentupimentos-conteudo p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .desentupimentos-conteudo ul {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        .desentupimentos-conteudo li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .desentupimentos-conteudo strong {
+            color: #ff9900;
+        }
+
+        .cta-container {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta-principal {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            text-shadow: none;
+        }
+
+        .cta-principal:hover {
+            transform: scale(1.05);
+            background: #20ba59;
+        }
+    </style>
+</head>
+
+<body class="pagina-interna">
+
+<!-- MENU PREMIUM CENTRALIZADO -->
+<header class="menu-fixo">
+    <div class="hamburguer" onclick="toggleMenu()">☰</div>
+
+    <img src="logo.png" alt="DR. Reparo">
+
+    <nav id="menu-links" class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="servicos-eletrica.html">Eletricidade</a>
+        <a href="servicos-pichelaria.html">Pichelaria</a>
+        <a href="servicos-reparacoes.html">Reparações</a>
+        <a href="servicos-moveis.html">Montagens</a>
+        <a href="servicos-seguranca.html">Segurança</a>
+        <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+    </nav>
+</header>
+
+<!-- HERO COM PADDING DIRETO NO FUNDO -->
+<section class="hero-desentupimentos">
+    <div class="desentupimentos-conteudo">
+        <h1>Limpeza e Desentupimento Prático</h1>
+        
+        <h2>A água da pia não desce ou o ralo da casa de banho está a transbordar?</h2>
+        <p>Um entupimento nunca avisa quando vai acontecer e transforma a rotina de qualquer casa num verdadeiro caos. Seja na bancada da cozinha devido à acumulação de gordura e restos de comida, ou na casa de banho por excesso de cabelos e sabão, tentar resolver o problema com químicos corrosivos de supermercado ou arames pode furar os canos e criar um prejuízo ainda maior.</p>
+        <p>A <strong>DR. Reparo</strong> resolve o seu problema de forma rápida, higiénica e definitiva, devolvendo o fluxo normal à canalização da sua casa ou escritório.</p>
+        
+        <h2>Onde atuamos para resolver o problema:</h2>
+        <ul>
+            <li><strong>Pias de Cozinha:</strong> Remoção de blocos de gordura solidificada e detritos acumulados nas tubagens que impedem a passagem da água e geram maus odores.</li>
+            <li><strong>Ralos e Sifões:</strong> Limpeza profunda de resíduos em ralos de banheiras, polbans e lavatórios, restabelecendo o escoamento imediato.</li>
+            <li><strong>Sanitas e Canos Gerais:</strong> Desentupimento mecânico e desobstrução de ramais internos de pichelaria que ligam os equipamentos às caixas de visita.</li>
+        </ul>
+
+        <h2>Vantagens de chamar a DR. Reparo:</h2>
+        <p>Não precisa de se sujar nem de stressar com soluções caseiras que não funcionam. Nós garantimos um serviço profissional:</p>
+        <ul>
+            <li><strong>Intervenção sem Danos:</strong> Utilizamos técnicas corretas para desentupir o encanamento sem partir loiças sanitárias ou danificar as juntas dos tubos.</li>
+            <li><strong>Higiene Máxima:</strong> Trabalhamos de forma organizada para que o ambiente fique limpo e habitável logo após a conclusão do serviço.</li>
+            <li><strong>Atendimento Urgente:</strong> Sabemos que um cano entupido é uma dor de cabeça, por isso respondemos com rapidez na região de Gondomar e Grande Porto.</li>
+        </ul>
+
+        <div class="cta-container">
+            <a href="https://wa.me/351910878830?text=Olá, preciso de um serviço urgente de desentupimento" class="cta-principal">
+                Chamar Desentupimento Urgente
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>DR. REPARO - Divisão Pichelaria</strong></p>
+    <p>Gondomar | Grande Porto</p>
+    <p>+351 910 878 830</p>
+    <p>&copy; 2026 Todos os direitos reservados.</p>
+</footer>
+
+<!-- SCRIPT DO MENU -->
+<script>
+    function toggleMenu() {
+        document.getElementById('menu-links').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

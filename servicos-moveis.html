@@ -7,11 +7,84 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Define o Hero mantendo a imagem de fundo original e aplicando o vidro fosco */
+        .hero-montagens {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 65vh;
+            padding: 160px 20px 60px 20px !important;
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('moveis.png') no-repeat center center !important;
+            background-size: cover !important;
+            text-align: center;
+        }
+
+        /* Efeito Vidro Fosco (Glassmorphism) */
+        .hero-montagens .hero-box {
+            background: rgba(255, 255, 255, 0.75) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.4) !important;
+            border-radius: 16px !important;
+            padding: 40px 50px !important;
+            max-width: 750px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        /* Título e Subtítulo */
+        .hero-montagens h1 {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #001133;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-montagens p {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.2rem;
+            color: #334466;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.5;
+        }
+
+        /* Botão do WhatsApp Premium */
+        .hero-montagens .cta-principal {
+            display: inline-block;
+            background: #25d366 !important;
+            color: #ffffff !important;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none !important;
+            padding: 15px 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .hero-montagens .cta-principal:hover {
+            background: #20ba59 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero-montagens .hero-box { padding: 30px 20px !important; }
+            .hero-montagens h1 { font-size: 2.1rem; }
+            .hero-montagens p { font-size: 1.05rem; }
+        }
+    </style>
 </head>
 
 <body class="pagina-interna">
 
-<!-- MENU PREMIUM CENTRALIZADO -->
 <header class="menu-fixo">
     <div class="hamburguer" onclick="toggleMenu()">☰</div>
 
@@ -28,8 +101,7 @@
     </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero-montagens" style="margin-top:140px;">
+<section class="hero-montagens">
     <div class="hero-box">
         <h1>Montagem de Móveis Profissional</h1>
         <p>Montamos os seus móveis com rapidez, rigor e ferramentas adequadas.</p>
@@ -39,7 +111,6 @@
     </div>
 </section>
 
-<!-- SERVIÇOS -->
 <section id="servicos">
     <h2 class="titulo-sec">Serviços Disponíveis</h2>
 
@@ -72,7 +143,6 @@
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p><strong>DR. REPARO - Divisão Montagens</strong></p>
     <p>Gondomar | Grande Porto</p>
@@ -80,7 +150,6 @@
     <p>&copy; 2026 Todos os direitos reservados.</p>
 </footer>
 
-<!-- SCRIPT DO MENU -->
 <script>
     function toggleMenu() {
         document.getElementById('menu-links').classList.toggle('show');

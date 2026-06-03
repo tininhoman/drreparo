@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR. Reparo | Automação Residencial e Casas Inteligentes</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para a página de automação sem o bloco branco */
+        .hero-automacao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+            padding-top: 140px; /* Elimina o buraco branco colando o fundo no menu */
+            min-height: 100vh;
+            /* Reutilizando a sua imagem com a nossa camada de escurecimento profissional */
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('eletrica.png') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .automacao-conteudo {
+            max-width: 850px;
+            width: 100%;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .automacao-conteudo h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff9900; /* Laranja padrão DR. Reparo */
+            margin-bottom: 20px;
+        }
+
+        .automacao-conteudo h2 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff9900;
+            padding-left: 12px;
+        }
+
+        .automacao-conteudo p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .automacao-conteudo ul {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        .automacao-conteudo li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .automacao-conteudo strong {
+            color: #ff9900;
+        }
+
+        .cta-container {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta-principal {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            text-shadow: none;
+        }
+
+        .cta-principal:hover {
+            transform: scale(1.05);
+            background: #20ba59;
+        }
+    </style>
+</head>
+
+<body class="pagina-interna">
+
+<!-- MENU PREMIUM CENTRALIZADO -->
+<header class="menu-fixo">
+    <div class="hamburguer" onclick="toggleMenu()">☰</div>
+
+    <img src="logo.png" alt="DR. Reparo">
+
+    <nav id="menu-links" class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="servicos-eletrica.html">Eletricidade</a>
+        <a href="servicos-pichelaria.html">Pichelaria</a>
+        <a href="servicos-reparacoes.html">Reparações</a>
+        <a href="servicos-moveis.html">Montagens</a>
+        <a href="servicos-seguranca.html">Segurança</a>
+        <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+    </nav>
+</header>
+
+<!-- HERO COM PADDING DIRETO NO FUNDO -->
+<section class="hero-automacao">
+    <div class="automacao-conteudo">
+        <h1>Automação Residencial (Domótica)</h1>
+        
+        <h2>Imagine controlar toda a sua casa com um simples toque no telemóvel ou por comando de voz.</h2>
+        <p>Abrir o portão da garagem antes mesmo de chegar à rua, programar os estores elétricos para subirem com o nascer do sol, ou ligar as luzes e o aquecimento do cilindro a caminho de casa após um dia longo de trabalho... O que antes parecia ficção científica, hoje é uma realidade acessível que traz **conforto, segurança e valorização imediata** ao seu imóvel.</p>
+        <p>Transformar a sua habitação numa verdadeira <strong>Casa Inteligente</strong> não exige obras caóticas ou partir paredes. Na <strong>DR. Reparo</strong>, desenvolvemos e instalamos sistemas inteligentes práticos e integrados para que tenha o controlo total do seu espaço na palma da mão.</p>
+        
+        <h2>As soluções inteligentes mais pedidas no Grande Porto:</h2>
+        <ul>
+            <li><strong>Iluminação Inteligente:</strong> Crie cenários de luz para ver filmes, jantar ou trabalhar. Controle lâmpadas e interruptores remotamente ou por voz (Alexa/Google Home), reduzindo também o desperdício na fatura da luz.</li>
+            <li><strong>Controlo de Estores e Portões:</strong> Automatize os seus estores elétricos e os portões de entrada para que respondam a horários programados ou comandos diretos no telemóvel, mesmo quando estiver longe de casa.</li>
+            <li><strong>Acessos e Climatização:</strong> Instalação de fechaduras inteligentes para abrir a porta a visitas sem sair do lugar, e integração de termóstatos para gerir o aquecimento de forma eficiente.</li>
+        </ul>
+
+        <h2>Porquê fazer o upgrade para uma Casa Inteligente com a DR. Reparo?</h2>
+        <p>Aparelhos inteligentes de supermercado podem ser difíceis de configurar e caem da rede Wi-Fi constantemente. Nós entregamos um sistema robusto e estável:</p>
+        <ul>
+            <li><strong>Integração Perfeita:</strong> Configuramos os módulos elétricos diretamente na sua rede atual para garantir que tudo funcione de forma sincronizada e sem falhas.</li>
+            <li><strong>Explicação Simples:</strong> Deixamos a aplicação configurada no seu telemóvel e ensinamos passo a passo como usar, sem complicações técnicas para si ou para a sua família.</li>
+            <li><strong>Proximidade e Confiança:</strong> Sediados em Gondomar, garantimos suporte técnico rápido sempre que precisar de atualizar ou expandir o seu sistema de domótica.</li>
+        </ul>
+
+        <div class="cta-container">
+            <a href="https://wa.me/351910878830?text=Olá, gostava de receber um orçamento para automatizar a minha casa/modernizar com domótica" class="cta-principal">
+                Modernizar a Minha Casa Agora
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>DR. REPARO - Divisão Engenharia e Tecnologia Residencial</strong></p>
+    <p>Gondomar | Grande Porto</p>
+    <p>+351 910 878 830</p>
+    <p>&copy; 2026 Todos os direitos reservados.</p>
+</footer>
+
+<!-- SCRIPT DO MENU -->
+<script>
+    function toggleMenu() {
+        document.getElementById('menu-links').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

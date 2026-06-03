@@ -7,6 +7,82 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+
+    <!-- DESIGN VIDRO FOSCO PREMIUM (LEVE E INTEGRADO) -->
+    <style>
+        /* Define o Hero mantendo a imagem de fundo original totalmente nítida */
+        .hero-pichelaria {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 65vh;
+            padding: 160px 20px 60px 20px !important;
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('pichelaria.png') no-repeat center center !important;
+            background-size: cover !important;
+            text-align: center;
+        }
+
+        /* Efeito Vidro Fosco (Glassmorphism) - Caixa Super Leve que não esconde o fundo */
+        .hero-pichelaria .hero-box {
+            background: rgba(255, 255, 255, 0.75) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.4) !important;
+            border-radius: 16px !important;
+            padding: 40px 50px !important;
+            max-width: 750px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        /* Título Escuro, Forte e Nítido */
+        .hero-pichelaria h1 {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #001133; /* Azul escuro da identidade visual */
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Subtítulo fluido */
+        .hero-pichelaria p {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.2rem;
+            color: #334466;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.5;
+        }
+
+        /* Botão do WhatsApp Premium Integrado - Sem sublinhados roxos */
+        .hero-pichelaria .cta-principal {
+            display: inline-block;
+            background: #25d366 !important;
+            color: #ffffff !important;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none !important;
+            padding: 15px 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .hero-pichelaria .cta-principal:hover {
+            background: #20ba59 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero-pichelaria .hero-box { padding: 30px 20px !important; }
+            .hero-pichelaria h1 { font-size: 2.1rem; }
+            .hero-pichelaria p { font-size: 1.05rem; }
+        }
+    </style>
 </head>
 
 <body class="pagina-interna">
@@ -28,45 +104,77 @@
     </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero-pichelaria" style="margin-top:140px;">
+<!-- HERO COM EFEITO VIDRO FOSCO -->
+<section class="hero-pichelaria">
     <div class="hero-box">
         <h1>Serviços de Pichelaria</h1>
-        <p>Segurança, rigor e tecnologia para a sua casa.</p>
+        <p>Segurança, rigor e tecnologia para a rede de águas e saneamento da sua casa.</p>
         <a href="https://wa.me/351910878830?text=Olá, preciso de um serviço de pichelaria" class="cta-principal">
             Pedir Orçamento via WhatsApp
         </a>
     </div>
 </section>
 
-<!-- SERVIÇOS -->
+<!-- SERVIÇOS EM GRELHA (8 CARDS TOTALMENTE FOCADOS EM PICHELARIA) -->
 <section id="servicos">
     <h2 class="titulo-sec">Serviços Disponíveis</h2>
 
     <div class="container servicos-grid">
 
+        <!-- Card 1 -->
         <div class="card">
             <h3>💧 Fugas de Água</h3>
-            <p>Deteção e reparação imediata de roturas e infiltrações.</p>
-            <a href="https://wa.me/351910878830?text=Olá, tenho uma fuga de água para reparar" class="btn-servico">Saber Mais</a>
+            <p>Deteção e reparação imediata de roturas, infiltrações e humidades em paredes.</p>
+            <a href="fugas-agua.html" class="btn-servico">Saber Mais</a>
         </div>
 
+        <!-- Card 2 -->
         <div class="card">
             <h3>🚽 Sanitários</h3>
-            <p>Montagem e reparação de sanitas, autoclismos e lavatórios.</p>
-            <a href="https://wa.me/351910878830?text=Olá, preciso de ajuda com loiças sanitárias" class="btn-servico">Saber Mais</a>
+            <p>Montagem, substituição e reparação de sanitas, autoclismos, torneiras e lavatórios.</p>
+            <a href="sanitarios.html" class="btn-servico">Saber Mais</a>
         </div>
 
+        <!-- Card 3 -->
         <div class="card">
             <h3>🚿 Termoacumuladores</h3>
-            <p>Instalação e manutenção de cilindros e aquecimento de água.</p>
-            <a href="https://wa.me/351910878830?text=Olá, preciso de reparação no termoacumulador" class="btn-servico">Saber Mais</a>
+            <p>Instalação e manutenção corretiva de cilindros, esquentadores e sistemas de aquecimento.</p>
+            <a href="cilindros.html" class="btn-servico">Saber Mais</a>
         </div>
 
+        <!-- Card 4 -->
         <div class="card">
             <h3>🛠️ Desentupimentos</h3>
-            <p>Limpeza e desentupimento de pias, ralos e sifões.</p>
-            <a href="https://wa.me/351910878830?text=Olá, preciso de um desentupimento urgente" class="btn-servico">Saber Mais</a>
+            <p>Limpeza rápida e eficaz de pias de cozinha, ralos de banheiras, sanitários e sifões.</p>
+            <a href="desentupimentos.html" class="btn-servico">Saber Mais</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <h3>🚰 Substituição de Torneiras</h3>
+            <p>Troca de misturadoras avariadas, instalação de torneiras de bica alta e sistemas de filtragem.</p>
+            <a href="https://wa.me/351910878830?text=Olá, preciso de um picheleiro para substituir ou reparar torneiras" class="btn-servico">Pedir Orçamento</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <h3>🌐 Redes de Água e Esgotos</h3>
+            <p>Renovação e instalação de tubagens modernas em PPR ou Multicamadas livres de corrosão.</p>
+            <a href="https://wa.me/351910878830?text=Olá, preciso de um orçamento para renovação de tubagem / redes de esgoto" class="btn-servico">Pedir Orçamento</a>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <h3>🔥 Radiadores e Toalheiros</h3>
+            <p>Instalação, purga e reparação de fugas em radiadores de aquecimento central e toalheiros elétricos.</p>
+            <a href="https://wa.me/351910878830?text=Olá, preciso de assistência técnica para radiadores ou aquecimento central" class="btn-servico">Pedir Orçamento</a>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <h3>🧼 Sifonagem Preventiva</h3>
+            <p>Manutenção e limpeza de caixas de visita e substituição de sifões antigos para eliminar maus odores.</p>
+            <a href="https://wa.me/351910878830?text=Olá, preciso de eliminar maus odores nas canalizações / limpeza de sifões" class="btn-servico">Pedir Orçamento</a>
         </div>
 
     </div>

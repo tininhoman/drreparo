@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR. Reparo | Localização e Reparação de Fugas de Água</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para a página de fugas de água sem o bloco branco */
+        .hero-pichelaria {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+            min-height: calc(100vh - 140px);
+            /* O gradiente linear abaixo garante que a imagem de fundo fique ligeiramente 
+               escurecida, permitindo leitura perfeita do texto branco */
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('sua-imagem-de-fundo.jpg') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .fugas-conteudo {
+            max-width: 850px;
+            width: 100%;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .fugas-conteudo h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff9900; /* Cor de destaque para o título principal */
+            margin-bottom: 20px;
+        }
+
+        .fugas-conteudo h2 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff9900;
+            padding-left: 12px;
+        }
+
+        .fugas-conteudo p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .fugas-conteudo ul {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        .fugas-conteudo li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .fugas-conteudo strong {
+            color: #ff9900;
+        }
+
+        .cta-container {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta-principal {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            text-shadow: none;
+        }
+
+        .cta-principal:hover {
+            transform: scale(1.05);
+            background: #20ba59;
+        }
+    </style>
+</head>
+
+<body class="pagina-interna">
+
+<!-- MENU PREMIUM CENTRALIZADO -->
+<header class="menu-fixo">
+    <div class="hamburguer" onclick="toggleMenu()">☰</div>
+
+    <img src="logo.png" alt="DR. Reparo">
+
+    <nav id="menu-links" class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="servicos-eletrica.html">Eletricidade</a>
+        <a href="servicos-pichelaria.html">Pichelaria</a>
+        <a href="servicos-reparacoes.html">Reparações</a>
+        <a href="servicos-moveis.html">Montagens</a>
+        <a href="servicos-seguranca.html">Segurança</a>
+        <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+    </nav>
+</header>
+
+<!-- HERO TEXTO DIRETO NO FUNDO -->
+<section class="hero-pichelaria" style="padding-top:140px;">
+    <div class="fugas-conteudo">
+        <h1>Localização e Reparação de Fugas de Água</h1>
+        
+        <h2>Sente que há algo errado com a canalização da sua casa?</h2>
+        <p>Parede encharcada, água aparecendo no chão, manchas de humidade que surgem do nada ou aquela surpresa desagradável com uma conta de água cara ao fim do mês... Tudo isso pode ser sinal de uma <strong>fuga de água</strong> que, às vezes, está escondida e pode causar sérios danos ao imóvel e ao seu bolso.</p>
+        <p>O grande perigo destas fugas é que elas costumam atuar de forma invisível atrás das paredes ou por baixo do piso, comprometendo a estrutura da sua habitação a cada hora que passa.</p>
+        
+        <h2>O que acontece se deixar para depois?</h2>
+        <ul>
+            <li><strong>Danos Estruturais:</strong> A água acumulada enfraquece a alvenaria, apodrece rodapés, estraga móveis embutidos e desvaloriza o seu património.</li>
+            <li><strong>Problemas de Saúde:</strong> A humidade excessiva gera fungos e bolor, piorando crises alérgicas e respiratórias da sua família.</li>
+            <li><strong>Prejuízo Financeiro:</strong> Uma microfuga invisível pode desperdiçar milhares de litros de água por mês. Não deite dinheiro ralo abaixo.</li>
+        </ul>
+
+        <h2>Como a DR. Reparo resolve o seu problema?</h2>
+        <p>Esqueça aquela ideia antiga de que para achar um vazamento é preciso partir a casa toda. Nós atuamos com rigor e inteligência:</p>
+        <ul>
+            <li><strong>Diagnóstico Técnico:</strong> Avaliamos minuciosamente os sintomas e os pontos críticos da rede.</li>
+            <li><strong>Localização Precisa:</strong> Identificamos o ponto exato da rotura, minimizando o impacto na sua habitação (sem quebra-quebra desnecessário).</li>
+            <li><strong>Reparação Eficiente:</strong> Corrigimos o problema na raiz e reparamos a canalização com materiais de alta durabilidade.</li>
+        </ul>
+
+        <div class="cta-container">
+            <a href="https://wa.me/351910878830?text=Olá, preciso de ajuda com uma fuga de água" class="cta-principal">
+                Resolver Fuga de Água Agora
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>DR. REPARO - Divisão Pichelaria</strong></p>
+    <p>Gondomar | Grande Porto</p>
+    <p>+351 910 878 830</p>
+    <p>&copy; 2026 Todos os direitos reservados.</p>
+</footer>
+
+<!-- SCRIPT DO MENU -->
+<script>
+    function toggleMenu() {
+        document.getElementById('menu-links').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

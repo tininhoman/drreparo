@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR. Reparo | Inspeção e Auditoria de Segurança Elétrica</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para a página de segurança sem o bloco branco */
+        .hero-seguranca {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+            padding-top: 140px; /* Acaba com o quadrado branco e cola na barra azul */
+            min-height: 100vh;
+            /* Aplicando o fundo 'eletrica.png' com o nosso filtro escuro premium */
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('eletrica.png') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .seguranca-conteudo {
+            max-width: 850px;
+            width: 100%;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .seguranca-conteudo h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff9900; /* Laranja oficial da DR. Reparo */
+            margin-bottom: 20px;
+        }
+
+        .seguranca-conteudo h2 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff9900;
+            padding-left: 12px;
+        }
+
+        .seguranca-conteudo p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .seguranca-conteudo ul {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        .seguranca-conteudo li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .seguranca-conteudo strong {
+            color: #ff9900;
+        }
+
+        .cta-container {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta-principal {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            text-shadow: none;
+        }
+
+        .cta-principal:hover {
+            transform: scale(1.05);
+            background: #20ba59;
+        }
+    </style>
+</head>
+
+<body class="pagina-interna">
+
+<!-- MENU PREMIUM CENTRALIZADO -->
+<header class="menu-fixo">
+    <div class="hamburguer" onclick="toggleMenu()">☰</div>
+
+    <img src="logo.png" alt="DR. Reparo">
+
+    <nav id="menu-links" class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="servicos-eletrica.html">Eletricidade</a>
+        <a href="servicos-pichelaria.html">Pichelaria</a>
+        <a href="servicos-reparacoes.html">Reparações</a>
+        <a href="servicos-moveis.html">Montagens</a>
+        <a href="servicos-seguranca.html">Segurança</a>
+        <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+    </nav>
+</header>
+
+<!-- HERO COM PADDING DIRETO NO FUNDO -->
+<section class="hero-seguranca">
+    <div class="seguranca-conteudo">
+        <h1>Inspeção e Segurança Elétrica</h1>
+        
+        <h2>A sua instalação elétrica está preparada para o consumo dos aparelhos modernos?</h2>
+        <p>Muitas habitações foram projetadas há uma ou duas décadas, quando os consumos elétricos eram infinitamente menores. Hoje, ao ligar aparelhos potentes como fervedores elétricos, placas de indução, máquinas de lavar ou sistemas de climatização, os cabos antigos podem sofrer um sobreaquecimento silencioso por trás das tomadas, derretendo o isolamento e criando um risco real de curto-circuito ou incêndio.</p>
+        <p>A pensar na proteção da sua família e do seu património, a <strong>DR. Reparo</strong> realiza auditorias completas e vistorias de segurança elétrica, diagnosticando pontos fracos antes que eles se transformem em acidentes graves ou avarias dispendiosas.</p>
+        
+        <h2>O que analisamos na nossa Auditoria de Segurança:</h2>
+        <ul>
+            <li><strong>Dimensionamento e Secção de Cabos:</strong> Verificamos se a espessura (secção) dos fios condutores é adequada para a carga que puxam, evitando que a instalação trabalhe sobrecarregada e sob risco de derreter.</li>
+            <li><strong>Inspeção do Quadro Elétrico:</strong> Avaliamos o estado de conservação dos disjuntores e testamos se os sistemas diferenciais de proteção contra choques elétricos estão a disparar no tempo correto.</li>
+            <li><strong>Medição de Consumos e Eficiência:</strong> Analisamos se existem fugas de corrente ocultas que possam estar a deitar energia fora e a inflacionar a sua fatura mensal sem que perceba.</li>
+        </ul>
+
+        <h2>Prevenção inteligente com a assinatura da DR. Reparo</h2>
+        <p>Garantir a segurança elétrica não é uma despesa, é o melhor investimento para o seu imóvel. Saiba porquê confiar no nosso olhar técnico:</p>
+        <ul>
+            <li><strong>Rigor Normativo:</strong> Avaliamos a sua instalação de acordo com as regras técnicas de segurança atuais, apontando as correções exatas a fazer.</li>
+            <li><strong>Transparência Sem Alarmismo:</strong> Entregamos-lhe um parecer honesto sobre o estado real da rede elétrica, priorizando o que precisa de ser corrigido com urgência.</li>
+            <li><strong>Ação em Gondomar e Grande Porto:</strong> Protegemos lares e escritórios em toda a região com deslocações rápidas, limpas e profissionais.</li>
+        </ul>
+
+        <div class="cta-container">
+            <a href="https://wa.me/351910878830?text=Olá, gostava de agendar uma inspeção de segurança elétrica na minha residência" class="cta-principal">
+                Agendar Inspeção de Segurança
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>DR. REPARO - Divisão Engenharia e Vistorias Técnicas</strong></p>
+    <p>Gondomar | Grande Porto</p>
+    <p>+351 910 878 830</p>
+    <p>&copy; 2026 Todos os direitos reservados.</p>
+</footer>
+
+<!-- SCRIPT DO MENU -->
+<script>
+    function toggleMenu() {
+        document.getElementById('menu-links').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

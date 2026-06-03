@@ -3,10 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DR. Reparo | Segurança Elétrica</title>
+    <title>DR. Reparo | Câmaras e Alarmes de Segurança</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+
+    <!-- DESIGN VIDRO FOSCO PREMIUM (LEVE E MODERNO) -->
+    <style>
+        /* Define o Hero mantendo a imagem de fundo 100% nítida e clara */
+        .hero-seguranca {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 65vh;
+            padding: 160px 20px 60px 20px !important;
+            /* Apenas um gradiente muito suave para não apagar a foto */
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('seguranca.png') no-repeat center center !important;
+            background-size: cover !important;
+            text-align: center;
+        }
+
+        /* Caixa Efeito Vidro Fosco (Glassmorphism) - Super Leve */
+        .hero-seguranca .hero-box {
+            background: rgba(255, 255, 255, 0.75) !important; /* Branco semi-transparente */
+            backdrop-filter: blur(12px) !important; /* Desfoca suavemente o fundo atrás da caixa */
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.4) !important; /* Borda fina de vidro */
+            border-radius: 16px !important; /* Cantos arredondados modernos */
+            padding: 40px 50px !important;
+            max-width: 750px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important; /* Sombra muito suave */
+        }
+
+        /* Título Escuro, Nítido e Elegante */
+        .hero-seguranca h1 {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #001133; /* Azul escuro da marca */
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Subtítulo limpo */
+        .hero-seguranca p {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.2rem;
+            color: #334466;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.5;
+        }
+
+        /* Botão do WhatsApp Premium Integrado */
+        .hero-seguranca .cta-principal {
+            display: inline-block;
+            background: #25d366 !important;
+            color: #ffffff !important;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none !important; /* Remove o sublinhado roxo */
+            padding: 15px 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .hero-seguranca .cta-principal:hover {
+            background: #20ba59 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero-seguranca .hero-box { padding: 30px 20px !important; }
+            .hero-seguranca h1 { font-size: 2.1rem; }
+            .hero-seguranca p { font-size: 1.05rem; }
+        }
+    </style>
 </head>
 
 <body class="pagina-interna">
@@ -28,62 +105,95 @@
     </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero-seguranca" style="margin-top:140px;">
+<!-- HERO COM EFEITO VIDRO FOSCO -->
+<section class="hero-seguranca">
     <div class="hero-box">
-        <h1>Segurança Elétrica</h1>
-        <p>Protegemos a sua casa contra riscos elétricos.</p>
-        <a href="https://wa.me/351910878830?text=Olá, preciso de uma verificação de segurança elétrica"
+        <h1>Câmaras e Alarmes</h1>
+        <p>Sistemas de segurança inteligentes e de alta definição para o seu imóvel. Sem contratos, fidelizações ou mensalidades.</p>
+        <a href="https://wa.me/351910878830?text=Olá, preciso de um orçamento para sistemas de segurança"
            class="cta-principal">Pedir Orçamento via WhatsApp</a>
     </div>
 </section>
 
-<!-- SERVIÇOS -->
+<!-- SERVIÇOS DE SEGURANÇA (8 CARDS) -->
 <section id="servicos">
-    <h2 class="titulo-sec">Serviços Disponíveis</h2>
+    <h2 class="titulo-sec">Sistemas de Proteção Disponíveis</h2>
 
     <div class="container servicos-grid">
-
+        <!-- Card 1 -->
         <div class="card">
-            <h3>⚡ Verificação de Cablagem</h3>
-            <p>Análise completa da instalação para garantir que suporta a carga atual.</p>
-            <a href="https://wa.me/351910878830?text=Olá, quero verificar a cablagem da minha casa"
+            <h3>📹 Câmaras de Vigilância (CCTV)</h3>
+            <p>Instalação de câmaras HD com visão noturna, gravação e monitorização em tempo real pelo telemóvel.</p>
+            <a href="https://wa.me/351910878830?text=Olá, gostava de um orçamento para instalação de câmaras CCTV"
                class="btn-servico">Saber Mais</a>
         </div>
 
+        <!-- Card 2 -->
         <div class="card">
-            <h3>🔥 Prevenção de Sobrecargas</h3>
-            <p>Identificação de pontos críticos que podem causar aquecimento ou curto-circuito.</p>
-            <a href="https://wa.me/351910878830?text=Olá, preciso de prevenir sobrecargas elétricas"
+            <h3>🚨 Alarmes Sem Mensalidade</h3>
+            <p>Sistemas de intrusão inteligentes com sensores de movimento e sirene, controlados 100% por si, sem contratos.</p>
+            <a href="https://wa.me/351910878830?text=Olá, quero saber mais sobre os alarmes sem mensalidade"
                class="btn-servico">Saber Mais</a>
         </div>
 
+        <!-- Card 3 -->
         <div class="card">
-            <h3>🛡️ Substituição de Tomadas Antigas</h3>
-            <p>Troca de tomadas queimadas, soltas ou fora das normas de segurança.</p>
-            <a href="https://wa.me/351910878830?text=Olá, preciso de trocar tomadas antigas"
+            <h3>🏷️ Vídeo Porteiros Digitais</h3>
+            <p>Substituição de campainhas por sistemas com ecrã e wi-fi para atender quem bate à porta diretamente na App.</p>
+            <a href="https://wa.me/351910878830?text=Olá, preciso de instalar ou trocar um vídeo porteiro"
                class="btn-servico">Saber Mais</a>
         </div>
 
+        <!-- Card 4 -->
         <div class="card">
-            <h3>🔍 Inspeção Preventiva</h3>
-            <p>Verificação geral para evitar riscos e garantir segurança total.</p>
-            <a href="https://wa.me/351910878830?text=Olá, quero uma inspeção preventiva"
+            <h3>🚪 Sensores de Portas e Janelas</h3>
+            <p>Montagem de contactos magnéticos sem fios que disparam alertas imediatos caso alguma entrada seja forçada.</p>
+            <a href="https://wa.me/351910878830?text=Olá, gostava de colocar sensores de abertura em portas e janelas"
                class="btn-servico">Saber Mais</a>
         </div>
 
+        <!-- Card 5 -->
+        <div class="card">
+            <h3>💡 Iluminação de Presença Exterior</h3>
+            <p>Instalação de projetores LED potentes com sensores de movimento para desencorajar intrusos em quintais e acessos.</p>
+            <a href="https://wa.me/351910878830?text=Olá, preciso de instalar projetores de luz com sensor de movimento"
+               class="btn-servico">Saber Mais</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <h3>🌐 Configuração de Redes e Apps</h3>
+            <p>Interligação das suas câmaras ao router da casa para garantir que o sinal de vídeo nunca falha no telemóvel.</p>
+            <a href="https://wa.me/351910878830?text=Olá, preciso de configurar/sincronizar as minhas câmaras no telemóvel"
+               class="btn-servico">Saber Mais</a>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <h3>🔑 Controlo de Acessos</h3>
+            <p>Instalação de fechaduras eletrónicas e trincos elétricos para abertura por código, cartão ou telemóvel.</p>
+            <a href="https://wa.me/351910878830?text=Olá, gostava de instalar um sistema de controlo de acessos / trinco elétrico"
+               class="btn-servico">Saber Mais</a>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <h3>🛠️ Manutenção e Afinação</h3>
+            <p>Limpeza de lentes de câmaras, substituição de baterias de alarmes antigos e reposicionamento de sensores.</p>
+            <a href="https://wa.me/351910878830?text=Olá, preciso de assistência técnica/manutenção para o meu sistema de segurança"
+               class="btn-servico">Saber Mais</a>
+        </div>
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <p><strong>DR. REPARO - Divisão Segurança</strong></p>
+    <p><strong>DR. REPARO - Divisão Sistemas de Segurança Eletrónica</strong></p>
     <p>Gondomar | Grande Porto</p>
     <p>+351 910 878 830</p>
     <p>&copy; 2026 Todos os direitos reservados.</p>
 </footer>
 
-<!-- SCRIPT DO MENU -->
 <script>
     function toggleMenu() {
         document.getElementById('menu-links').classList.toggle('show');

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR. Reparo | Montagem e Reparação de Sanitários</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para a página de sanitários sem o bloco branco */
+        .hero-sanitarios {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+            /* Trocamos a margin por padding-top para o fundo colar no menu azul */
+            padding-top: 140px; 
+            min-height: 100vh;
+            /* Substitua 'fundo-sanitarios.jpg' pela sua imagem de canalização/casa de banho */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fundo-sanitarios.jpg') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .sanitarios-conteudo {
+            max-width: 850px;
+            width: 100%;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .sanitarios-conteudo h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+
+        .sanitarios-conteudo h2 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff9900;
+            padding-left: 12px;
+        }
+
+        .sanitarios-conteudo p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .sanitarios-conteudo ul {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        .sanitarios-conteudo li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .sanitarios-conteudo strong {
+            color: #ff9900;
+        }
+
+        .cta-container {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta-principal {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            text-shadow: none;
+        }
+
+        .cta-principal:hover {
+            transform: scale(1.05);
+            background: #20ba59;
+        }
+    </style>
+</head>
+
+<body class="pagina-interna">
+
+<!-- MENU PREMIUM CENTRALIZADO -->
+<header class="menu-fixo">
+    <div class="hamburguer" onclick="toggleMenu()">☰</div>
+
+    <img src="logo.png" alt="DR. Reparo">
+
+    <nav id="menu-links" class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="servicos-eletrica.html">Eletricidade</a>
+        <a href="servicos-pichelaria.html">Pichelaria</a>
+        <a href="servicos-reparacoes.html">Reparações</a>
+        <a href="servicos-moveis.html">Montagens</a>
+        <a href="servicos-seguranca.html">Segurança</a>
+        <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+    </nav>
+</header>
+
+<!-- HERO COM PADDING DIRETO NO FUNDO -->
+<section class="hero-sanitarios">
+    <div class="sanitarios-conteudo">
+        <h1>Montagem e Reparação de Sanitários</h1>
+        
+        <h2>Problemas na casa de banho? Nós resolvemos com rapidez e rigor.</h2>
+        <p>Um autoclismo a pingar sem parar, uma sanita solta, infiltrações na base do lavatório ou aquela louça sanitária antiga que precisa urgentemente de ser renovada... Pequenos problemas nos sanitários causam grandes incómodos na rotina diária e, pior, podem inflacionar drasticamente a sua fatura da água.</p>
+        <p>A <strong>DR. Reparo</strong> oferece soluções completas de pichelaria para garantir o perfeito funcionamento e o design da sua casa de banho, sem chatices e com total limpeza.</p>
+        
+        <h2>O que fazemos por si:</h2>
+        <ul>
+            <li><strong>Autoclismos:</strong> Reparação de mecanismos de descarga (sistemas de boia e fluxómetros) que causam perdas contínuas de água, ou instalação de novos modelos mais económicos.</li>
+            <li><strong>Sanitas e Bidés:</strong> Instalação completa de novas louças sanitárias, substituição de tampos, fixação firme ao piso e eliminação de maus odores ou fugas na base.</li>
+            <li><strong>Lavatórios e Torneiras:</strong> Montagem de lavatórios, substituição de sifões antigos, eliminação de entupimentos e substituição de juntas de silicone danificadas.</li>
+        </ul>
+
+        <h2>Porquê escolher a DR. Reparo?</h2>
+        <p>Evite reparações caseiras que podem resultar em inundações e danos no teto do seu vizinho de baixo. O nosso trabalho é garantido por profissionais especializados:</p>
+        <ul>
+            <li><strong>Materiais de Qualidade:</strong> Utilizamos vedantes e peças de alta durabilidade para evitar manutenções repetitivas.</li>
+            <li><strong>Instalação Limpa:</strong> Cuidamos do seu espaço como se fosse o nosso, deixando tudo limpo após o serviço.</li>
+            <li><strong>Preço Justo e Transparente:</strong> Sem intermediários e sem surpresas no orçamento final.</li>
+        </ul>
+
+        <div class="cta-container">
+            <a href="https://wa.me/351910878830?text=Olá, preciso de assistência com sanitários/autoclismos" class="cta-principal">
+                Resolver Problema no Sanitário
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>DR. REPARO - Divisão Pichelaria</strong></p>
+    <p>Gondomar | Grande Porto</p>
+    <p>+351 910 878 830</p>
+    <p>&copy; 2026 Todos os direitos reservados.</p>
+</footer>
+
+<!-- SCRIPT DO MENU -->
+<script>
+    function toggleMenu() {
+        document.getElementById('menu-links').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

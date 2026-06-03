@@ -3,64 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnóstico</title>
+    <title>DR. Reparo | Diagnóstico de Avarias Elétricas</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para a página de diagnóstico elétrico sem blocos brancos */
+        .hero-diagnostico-eletrico {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+            padding-top: 140px; /* Garante que o fundo cole perfeitamente no menu azul */
+            min-height: 100vh;
+            /* Usando a sua imagem eletrica.png com o filtro de escurecimento premium */
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('eletrica.png') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .diagnostico-conteudo {
+            max-width: 850px;
+            width: 100%;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .diagnostico-conteudo h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff9900; /* Laranja de destaque da DR. Reparo */
+            margin-bottom: 20px;
+        }
+
+        .diagnostico-conteudo h2 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff9900;
+            padding-left: 12px;
+        }
+
+        .diagnostico-conteudo p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .diagnostico-conteudo ul {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        .diagnostico-conteudo li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .diagnostico-conteudo strong {
+            color: #ff9900;
+        }
+
+        .cta-container {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta-principal {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            text-shadow: none;
+        }
+
+        .cta-principal:hover {
+            transform: scale(1.05);
+            background: #20ba59;
+        }
+    </style>
 </head>
 
 <body class="pagina-interna">
 
-    <!-- MENU PREMIUM CENTRALIZADO -->
-    <header class="menu-fixo">
-        <div class="hamburguer" onclick="toggleMenu()">☰</div>
+<!-- MENU PREMIUM CENTRALIZADO -->
+<header class="menu-fixo">
+    <div class="hamburguer" onclick="toggleMenu()">☰</div>
 
-        <img src="logo.png" alt="DR. Reparo">
+    <img src="logo.png" alt="DR. Reparo">
 
-        <nav id="menu-links" class="menu-links">
-            <a href="index.html">Início</a>
-            <a href="servicos-eletrica.html">Eletricidade</a>
-            <a href="servicos-pichelaria.html">Pichelaria</a>
-            <a href="servicos-reparacoes.html">Reparações</a>
-            <a href="servicos-moveis.html">Montagens</a>
-            <a href="servicos-seguranca.html">Segurança</a>
-            <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
-        </nav>
-    </header>
+    <nav id="menu-links" class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="servicos-eletrica.html">Eletricidade</a>
+        <a href="servicos-pichelaria.html">Pichelaria</a>
+        <a href="servicos-reparacoes.html">Reparações</a>
+        <a href="servicos-moveis.html">Montagens</a>
+        <a href="servicos-seguranca.html">Segurança</a>
+        <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+    </nav>
+</header>
 
-    <!-- HERO -->
-    <section class="hero-servico" style="background-image: url('eletrica.png'); margin-top:140px;">
-        <div class="hero-box">
-            <h1>Diagnóstico</h1>
-            <p>Algo não anda bem? Nós descobrimos o motivo.</p>
+<!-- HERO COM PADDING DIRETO NO FUNDO -->
+<section class="hero-diagnostico-eletrico">
+    <div class="diagnostico-conteudo">
+        <h1>Diagnóstico e Deteção de Avarias Elétricas</h1>
+        
+        <h2>Tem um problema elétrico intermitente que ninguém consegue resolver?</h2>
+        <p>Um disjuntor diferencial que dispara do nada (e muitas vezes a meio da noite), tomadas que deixam de funcionar sem motivo aparente, lâmpadas que piscam ou aquele cheiro suspeito a plástico queimado vindo de trás das paredes... Avarias elétricas ocultas são perigosas e desgastantes.</p>
+        <p>Tentar adivinhar a origem de uma falha elétrica trocando peças às cegas é um erro que custa caro e coloca o seu imóvel em risco. Na <strong>DR. Reparo</strong>, aplicamos conhecimento técnico e equipamentos de medição para localizar o ponto exato do curto-circuito ou da fuga de corrente, garantindo uma solução definitiva.</p>
+        
+        <h2>Como o nosso Diagnóstico Elétrico protege o seu bolso e a sua casa:</h2>
+        <ul>
+            <li><strong>Localização de Fugas de Corrente:</strong> Identificamos com precisão qual o eletrodoméstico ou linha de cablagem que está a fazer o disjuntor geral desarmar, isolando o problema imediatamente.</li>
+            <li><strong>Mapeamento de Sobrecargas:</strong> Analisamos o equilíbrio das fases e dos circuitos do seu quadro elétrico para descobrir por que a rede vai abaixo quando liga a placa de indução ou o cilindro.</li>
+            <li><strong>Testes de Isolamento e Continuidade:</strong> Rastreamos fios antigos ou derretidos no interior das tubagens que possam estar a causar perdas de energia silenciosas e a inflacionar a sua fatura da luz.</li>
+        </ul>
+
+        <h2>Equipamento e rigor técnico ao seu serviço</h2>
+        <p>Não trabalhamos com palpites. A nossa abordagem foca-se na engenharia e na segurança da sua instalação:</p>
+        <ul>
+            <li><strong>Ferramentas de Diagnóstico:</strong> Utilizamos multímetros, pinças amperimétricas e aparelhos de teste de isolamento adequados para ler os parâmetros reais da sua rede com total precisão.</li>
+            <li><strong>Relatório e Resolução:</strong> Após detetar a falha, explicamos-lhe exatamente o que está a acontecer e apresentamos a solução de reparação mais segura e económica para o seu caso.</li>
+            <li><strong>Ação Rápida no Grande Porto:</strong> Atendemos Gondomar e toda a região metropolitana para eliminar riscos elétricos ocultos da sua habitação ou escritório.</li>
+        </ul>
+
+        <div class="cta-container">
+            <a href="https://wa.me/351910878830?text=Olá, preciso de um diagnóstico técnico para localizar uma avaria elétrica na minha casa" class="cta-principal">
+                Agendar Diagnóstico Elétrico
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CONTEÚDO -->
-    <section id="conteudo" style="max-width: 900px; margin: 60px auto; padding: 20px;">
-        <h2 style="text-align:center; color:#002266; margin-bottom:25px;">
-            Sobre este serviço
-        </h2>
+<!-- FOOTER -->
+<footer>
+    <p><strong>DR. REPARO - Divisão Engenharia e Instalações Elétricas</strong></p>
+    <p>Gondomar | Grande Porto</p>
+    <p>+351 910 878 830</p>
+    <p>&copy; 2026 Todos os direitos reservados.</p>
+</footer>
 
-        <p style="font-size:1.1rem; line-height:1.8; text-align:justify;">
-            Fazemos o diagnóstico completo, identificando a falha e também a causa do problema. 
-            Não adianta apenas reparar — é essencial resolver a origem para que a situação 
-            não volte a acontecer. Trabalhamos para garantir uma solução definitiva, evitando 
-            que o cliente enfrente o mesmo problema novamente.
-        </p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Dr. Reparo - Soluções para sua casa e escritório</p>
-    </footer>
-
-    <!-- SCRIPT DO MENU -->
-    <script>
-        function toggleMenu() {
-            document.getElementById('menu-links').classList.toggle('show');
-        }
-    </script>
+<!-- SCRIPT DO MENU -->
+<script>
+    function toggleMenu() {
+        document.getElementById('menu-links').classList.toggle('show');
+    }
+</script>
 
 </body>
 </html>

@@ -3,157 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Reparo - Especialista em Manutenção</title>
+    <title>DR. Reparo | Especialista em Manutenção</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body, html {
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
+        /* NOVO FUNDO CLEAN E PREMIUM (ESTILO APPLE) */
+        .hero-home {
+            /* Um degradê super suave que vai de um cinza bem claro para um tom levemente acetinado */
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+            padding: 160px 20px 100px 20px !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            min-height: 85vh !important;
         }
 
-        /* FUNDO DO INDEX */
-        .bg-plano {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 120%;
-            height: 100%;
-            background: url('plano.png') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
+        /* CAIXA BRANCA PREMIUM COM SOMBRA SUAVE EM VEZ DE VIDRO */
+        .hero-home .hero-box {
+            display: block !important;
+            background: #ffffff !important; 
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 24px !important;
+            padding: 50px 55px !important;
+            max-width: 740px !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            /* Sombra suave e moderna para dar profundidade sem pesar */
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06) !important; 
+            box-sizing: border-box !important;
+            text-align: center !important;
         }
 
-        /* HERO DO INDEX */
-        .container {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 6%;
-            padding-top: 140px; /* espaço para o menu */
+        .hero-home h1 {
+            font-family: 'Segoe UI', Roboto, sans-serif !important;
+            font-size: 3.2rem !important;
+            font-weight: 800 !important;
+            color: #002266 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: -1px !important;
         }
 
-        .hero-content {
-            max-width: 550px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.92);
-            padding: 30px 40px;
-            border-radius: 14px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        /* Texto institucional com contraste perfeito para leitura */
+        .frase-institucional {
+            font-family: 'Segoe UI', Roboto, sans-serif !important;
+            font-size: 1.15rem !important;
+            color: #334155 !important; /* Um cinza escuro confortável para os olhos */
+            line-height: 1.6 !important;
+            margin-bottom: 35px !important;
+            max-width: 640px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
         }
 
-        .hero-content h1 {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #002266;
-            margin-bottom: 10px;
+        .frase-institucional strong {
+            color: #002266 !important;
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #002266;
+        /* Linha divisória interna suave */
+        .divisor-linha {
+            border: 0 !important;
+            height: 1px !important;
+            background: linear-gradient(to right, rgba(0,34,102,0), rgba(0,34,102,0.15), rgba(0,34,102,0)) !important;
+            margin-bottom: 35px !important;
         }
 
-        .btn-whatsapp {
-            display: inline-block;
-            background: #25d366;
-            color: white;
-            padding: 14px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: 0.3s;
+        /* Container do Menu Dropdown */
+        .seletor-container {
+            text-align: left !important;
+            max-width: 540px !important;
+            margin: 0 auto !important;
         }
 
-        .btn-whatsapp:hover {
-            transform: scale(1.05);
+        .seletor-container label {
+            display: block !important;
+            font-family: 'Segoe UI', Roboto, sans-serif !important;
+            font-size: 1.1rem !important;
+            font-weight: 700 !important;
+            color: #002266 !important;
+            margin-bottom: 12px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
         }
 
-        /* FOOTER */
-        .footer-barra {
-            background-color: #000;
-            color: #fff;
-            padding: 16px 6%;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            z-index: 100;
+        /* Menu de Seleção Impecável */
+        .seletor-problema {
+            width: 100% !important;
+            padding: 16px 20px !important;
+            font-family: 'Segoe UI', Roboto, sans-serif !important;
+            font-size: 1.1rem !important;
+            font-weight: 500 !important;
+            color: #0f172a !important;
+            background-color: #ffffff !important;
+            border: 2px solid #cbd5e1 !important;
+            border-radius: 12px !important;
+            cursor: pointer !important;
+            outline: none !important;
+            transition: all 0.3s ease !important;
+            
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23002266' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 15px center !important;
+            background-size: 18px !important;
+            padding-right: 45px !important;
         }
 
-        .footer-barra a {
-            color: #ff9900;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #ff9900;
-            padding: 4px 10px;
-            border-radius: 4px;
-            transition: 0.3s;
+        .seletor-problema:focus {
+            border-color: #002266 !important;
+            box-shadow: 0 0 0 4px rgba(0, 34, 102, 0.1) !important;
         }
 
-        .footer-barra a:hover {
-            background: #ff9900;
-            color: #000;
+        /* Responsividade para ecrãs pequenos / Telemóveis */
+        @media (max-width: 768px) {
+            .hero-home { padding-top: 130px !important; }
+            .hero-home .hero-box { padding: 35px 25px !important; }
+            .hero-home h1 { font-size: 2.2rem !important; }
+            .frase-institucional { font-size: 1rem !important; margin-bottom: 25px !important; }
+            .seletor-container label { font-size: 1rem !important; }
+            .seletor-problema { font-size: 0.95rem !important; padding: 14px 15px !important; }
         }
     </style>
 </head>
 
-<body class="pagina-interna">
+<body>
 
-    <div class="bg-plano"></div>
+<header class="menu-fixo">
+    <div class="hamburguer" onclick="toggleMenu()">☰</div>
 
-    <!-- MENU PREMIUM (IGUAL AO DAS OUTRAS PÁGINAS) -->
-    <header class="menu-fixo">
-        <img src="logo.png" alt="DR. Reparo">
+    <img src="logo.png" alt="DR. Reparo">
 
-        <div class="hamburguer" onclick="toggleMenu()">☰</div>
+    <nav id="menu-links" class="menu-links">
+        <a href="index.html">Início</a>
+        <a href="servicos-eletrica.html">Eletricidade</a>
+        <a href="servicos-pichelaria.html">Pichelaria</a>
+        <a href="servicos-reparacoes.html">Reparações</a>
+        <a href="servicos-moveis.html">Montagens</a>
+        <a href="servicos-seguranca.html">Segurança</a>
+        <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
+    </nav>
+</header>
 
-        <nav class="menu-links" id="menu-links">
-            <a href="index.html">Início</a>
-            <a href="servicos-eletrica.html">Eletricidade</a>
-            <a href="servicos-pichelaria.html">Pichelaria</a>
-            <a href="servicos-reparacoes.html">Reparações</a>
-            <a href="servicos-moveis.html">Montagens</a>
-            <a href="servicos-seguranca.html">Segurança</a>
-            <a href="https://wa.me/351910878830" class="btn-wpp">WhatsApp</a>
-        </nav>
-    </header>
+<section class="hero-home">
+    <div class="hero-box">
+        <h1>DR. Reparo</h1>
+        
+        <p class="frase-institucional">
+            Quem contrata a <strong>Dr. Reparos</strong>, fala e vê a Dr. Reparos. Aqui não há intermediários, subcontratações ou surpresas. Do orçamento à entrega, é a nossa cara e a nossa responsabilidade na sua casa.
+        </p>
 
-    <div class="container">
-        <div class="hero-content">
-            <h1>DR. Reparo</h1>
-            <p>Serviços Profissionais para a sua Casa e Escritório.</p>
-            <a href="https://wa.me/351910878830" class="btn-whatsapp">Pedir Orçamento</a>
+        <hr class="divisor-linha">
+        
+        <div class="seletor-container">
+            <label for="problema">Como podemos ajudar hoje?</label>
+            
+            <select id="problema" class="seletor-problema" onchange="irParaPagina(this)">
+                <option value="" disabled selected>Escolha o problema que quer resolver...</option>
+                
+                <optgroup label="⚡ Eletricidade Geral">
+                    <option value="instalacoes.html">Nova Instalação / Tomadas e Luzes</option>
+                    <option value="diagnostico.html">Curto-circuito / Quadro a Disparar</option>
+                    <option value="automacao.html">Domótica e Automação de Luz/Portões</option>
+                    <option value="servicos-eletrica.html">Ver Todos os Serviços Elétricos</option>
+                </optgroup>
+                
+                <optgroup label="💧 Canalização e Pichelaria">
+                    <option value="fugas-agua.html">Fuga de Água ou Infiltração</option>
+                    <option value="sanitarios.html">Sanitas, Torneiras ou Louças</option>
+                    <option value="cilindros.html">Termoacumulador (Cilindro) ou Esquentador</option>
+                    <option value="desentupimentos.html">Desentupimento de Canos ou Sifões</option>
+                    <option value="servicos-pichelaria.html">Ver Todos os Serviços de Pichelaria</option>
+                </optgroup>
+                
+                <optgroup label="🛠️ Outras Soluções">
+                    <option value="servicos-moveis.html">Montagem de Móveis Profissional</option>
+                    <option value="servicos-seguranca.html">Câmaras de Vigilância ou Alarmes</option>
+                    <option value="servicos-reparacoes.html">Pequenas Reparações Gerais</option>
+                </optgroup>
+            </select>
         </div>
     </div>
+</section>
 
-    <div class="footer-barra">
-        <span>© 2026 DR. REPARO - Gondomar | Grande Porto</span>
+<footer>
+    <p><strong>DR. REPARO - Soluções Integradas</strong></p>
+    <p>Gondomar | Grande Porto</p>
+    <p>+351 910 878 830</p>
+    <p>&copy; 2026 Todos os direitos reservados.</p>
+</footer>
 
-        <div style="display: flex; gap: 10px;">
-            <a href="https://www.facebook.com/share/18i7vnokw1/" target="_blank">Facebook</a>
-            <a href="contacto.html">Contato</a>
-        </div>
-    </div>
+<script>
+    function toggleMenu() {
+        document.getElementById('menu-links').classList.toggle('show');
+    }
 
-    <script>
-        function toggleMenu() {
-            document.getElementById('menu-links').classList.toggle('show');
+    function irParaPagina(seletor) {
+        const url = seletor.value;
+        if (url) {
+            window.location.href = url;
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>
