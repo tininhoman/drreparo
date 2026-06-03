@@ -9,40 +9,39 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* RESET BÁSICO PARA EVITAR BORDAS BRANCAS */
+        /* RESET E ESTRUTURA */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         html, body {
-            margin: 0;
-            padding: 0;
             width: 100%;
-            height: 100%;
-            overflow-x: hidden;
+            min-height: 100vh;
+            overflow-x: hidden; /* Remove barra horizontal */
+            /* Removemos o height: 100% no body para permitir o fluxo natural */
         }
 
-        /* FUNDO FIXO QUE CUBRE TUDO */
+        /* FUNDO FIXO - Corrigido para 100% sem sobras */
         .bg-plano {
             position: fixed;
             top: 0;
             left: 0;
-            width: 109vw; /* 100% da largura da viewport */
-            height: 107vh; /* 100% da altura da viewport */
+            width: 100vw;
+            height: 100vh;
             background: url('plano.png') no-repeat center center;
             background-size: cover;
             z-index: -1;
         }
 
-        /* HERO TRANSPARENTE PARA O FUNDO APARECER */
+        /* HERO - Ajustado para altura dinâmica */
         .hero-home {
-            background: transparent !important;
-            padding: 180px 20px 100px 20px !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            min-height: 100vh !important;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 20px 60px 20px !important; /* Espaço para o menu e footer */
+            min-height: calc(100vh - 100px); /* Garante que o conteúdo caiba na tela */
         }
 
-        /* CAIXA BRANCA PADRÃO */
         .hero-home .hero-box {
-            display: block !important;
             background: #ffffff !important; 
             border: 1px solid #e2e8f0 !important;
             border-radius: 24px !important;
@@ -51,74 +50,36 @@
             width: 100% !important;
             margin: 0 auto !important;
             box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06) !important; 
-            box-sizing: border-box !important;
             text-align: center !important;
         }
 
-        .hero-home h1 {
-            font-family: 'Segoe UI', Roboto, sans-serif !important;
-            font-size: 3.2rem !important;
-            font-weight: 800 !important;
-            color: #002266 !important;
-            margin-bottom: 20px !important;
-            letter-spacing: -1px !important;
-        }
-
-        .frase-institucional {
-            font-family: 'Segoe UI', Roboto, sans-serif !important;
-            font-size: 1.15rem !important;
-            color: #334155 !important;
-            line-height: 1.6 !important;
-            margin-bottom: 35px !important;
-            max-width: 640px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-        .frase-institucional strong { color: #002266 !important; }
-
-        .divisor-linha {
-            border: 0 !important;
-            height: 1px !important;
-            background: linear-gradient(to right, rgba(0,34,102,0), rgba(0,34,102,0.15), rgba(0,34,102,0)) !important;
-            margin-bottom: 35px !important;
-        }
+        .hero-home h1 { font-size: 3.2rem !important; font-weight: 800 !important; color: #002266 !important; margin-bottom: 20px !important; }
+        .frase-institucional { font-size: 1.15rem !important; color: #334155 !important; line-height: 1.6 !important; margin-bottom: 35px !important; }
 
         .seletor-container { text-align: left !important; max-width: 540px !important; margin: 0 auto !important; }
-
-        .seletor-container label {
-            display: block !important;
-            font-family: 'Segoe UI', Roboto, sans-serif !important;
-            font-size: 1.1rem !important;
-            font-weight: 700 !important;
-            color: #002266 !important;
-            margin-bottom: 12px !important;
-            text-transform: uppercase !important;
-        }
-
         .seletor-problema {
             width: 100% !important;
             padding: 16px 20px !important;
-            font-family: 'Segoe UI', Roboto, sans-serif !important;
             font-size: 1rem !important;
-            color: #0f172a !important;
-            background-color: #ffffff !important;
             border: 2px solid #cbd5e1 !important;
             border-radius: 12px !important;
             cursor: pointer !important;
-            appearance: none !important;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23002266' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>") !important;
-            background-repeat: no-repeat !important;
-            background-position: right 15px center !important;
-            background-size: 18px !important;
-            padding-right: 45px !important;
+        }
+
+        /* FOOTER - Ajustado */
+        footer {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #ffffff;
+            background: #333;
         }
 
         @media (max-width: 768px) {
-            .hero-home { padding-top: 130px !important; }
-            .hero-home .hero-box { padding: 35px 25px !important; }
-            .hero-home h1 { font-size: 2rem !important; }
-            .seletor-problema { font-size: 0.9rem !important; padding: 12px 15px !important; }
+            .hero-home { padding-top: 100px !important; }
+            .hero-home .hero-box { padding: 30px 20px !important; }
+            .hero-home h1 { font-size: 1.8rem !important; }
         }
     </style>
 </head>
@@ -177,8 +138,7 @@
 
 <footer>
     <p><strong>DR. REPARO - Soluções Integradas</strong></p>
-    <p>Gondomar | Grande Porto</p>
-    <p>+351 910 878 830</p>
+    <p>Gondomar | Grande Porto | +351 910 878 830</p>
     <p>&copy; 2026 Todos os direitos reservados.</p>
 </footer>
 
